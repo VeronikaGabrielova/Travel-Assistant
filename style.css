@@ -14,13 +14,15 @@ html {
   line-height: 1.4rem;
   color: var(--dark-grey);
 }
+
 *,
 ::after,
 ::before {
   box-sizing: inherit;
 }
+
 body {
-  margin: 0 auto;
+  margin: 0;
 }
 
 .header-background {
@@ -29,8 +31,8 @@ body {
   width: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgb(0, 0, 0, 0.1),
-      rgb(0, 0, 0, 0.1)
+      rgb(0, 0, 0, 0.2),
+      rgb(0, 0, 0, 0.2)
     ),
     url(images/tent.jpg);
   background-size: cover;
@@ -43,43 +45,44 @@ body {
   position: absolute;
   right: 25px;
   bottom: 25px;
-  inline-size: min-content;
   margin: 0;
+  inline-size: min-content;
   text-align: right;
-  line-height: 2.4rem;
   font-size: 40px;
+  line-height: 2.4rem;
   font-weight: 500;
   color: var(--grey);
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
-.section-padding {
-  padding: 80px 25px 50px 25px;
+.section-aboutus {
+  padding: 80px 25px;
 }
 
-.section-aboutus__heading {
+.section-aboutus-text__heading {
   font-size: 30px;
 }
 
-.section-aboutus__paragraph {
+.section-aboutus-text__paragraph {
   margin-bottom: 30px;
 }
 
 .aboutus-image__img {
-  margin: 40px 0 50px 0;
-}
-
-.image {
   display: block;
   width: 100%;
-  margin-top: 10px;
   border-radius: 5px;
 }
 
-.section-wedo__background {
+.section-wedo-background {
   background-color: var(--dark-brown);
   color: var(--grey);
   text-align: center;
 }
+
+.section-wedo {
+  padding: 80px 25px 50px 25px;
+}
+
 .section-wedo__heading {
   font-size: 30px;
   font-weight: 500;
@@ -96,11 +99,18 @@ body {
   font-size: 25px;
 }
 
-.section-padding--trips {
-  padding-top: 50px;
+.section-trips {
+  padding: 50px 25px 50px 25px;
 }
 
-.trips-item__box {
+.section-trips-image__img {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.section-trips-image__box {
   padding: 25px;
   margin: 10px 0 0 0;
   width: 100%;
@@ -110,13 +120,17 @@ body {
   background-color: var(--grey);
 }
 
-.section-togo__background {
+.section-togo {
+  padding: 80px 25px 70px 25px;
+}
+
+.section-togo-background {
   color: var(--grey);
   background-color: var(--light-brown);
   text-align: left;
 }
 
-.section-togo__heading {
+.section-togo-item__heading {
   margin: 0;
   font-size: 60px;
   line-height: normal;
@@ -125,7 +139,7 @@ body {
 .button {
   display: inline-block;
   padding: 10px 30px;
-  margin: 60px 0 20px 0;
+  margin: 60px 0 0 0;
   border-radius: 5px;
   background-color: var(--grey);
   cursor: pointer;
@@ -136,7 +150,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  color: black;
+  color: var(--dark-brown);
 }
 
 .button:hover,
@@ -144,11 +158,19 @@ body {
   background-color: var(--hover);
 }
 
+.section-reviews-background {
+  background-color: var(--grey);
+}
+
 .section-reviews {
+  padding: 80px 25px 50px 25px;
+}
+
+.section-reviews-container {
   text-align: center;
 }
 
-.section-reviews__img {
+.section-reviews-clients-item__img {
   width: 100%;
   width: 150px;
   height: 150px;
@@ -156,23 +178,21 @@ body {
   border-radius: 50%;
   margin-top: 40px;
 }
-
-.section-gallery__img {
-  width: 100%;
-  display: block;
-}
-
-.section-reviews__name {
+.section-reviews-clients-item__name {
   font-weight: 400;
+}
+.section-gallery-image__img {
+  display: block;
+  width: 100%;
 }
 
 .background-footer {
   padding: 20px;
+  font-size: 12px;
+  font-weight: 300;
   text-align: center;
   color: var(--grey);
   background-color: var(--dark-grey);
-  font-size: 12px;
-  font-weight: 300;
 }
 
 .background-footer__link {
@@ -190,35 +210,35 @@ body {
 @media screen and (min-width: 768px) {
   .header-background__heading {
     right: 50px;
-    font-size: 60px;
-    line-height: 3.5rem;
-  }
-
-  .section-padding {
-    padding: 80px 50px;
-    margin: 0 auto;
-    max-width: 1100px;
+    font-size: 80px;
+    line-height: 4.5rem;
   }
 
   .section-aboutus {
+    padding: 80px 50px;
     display: flex;
   }
 
-  .section-aboutus__text {
+  .section-aboutus-text {
     flex: 0 0 50%;
     padding: 0 30px;
   }
 
-  .section-aboutus__heading {
+  .section-aboutus-text__heading {
     margin-top: 80px;
     font-size: 50px;
   }
+  .aboutus-image {
+    flex: 0 0 50%;
+  }
 
   .aboutus-image__img {
-    flex: 0 0 50%;
     margin: 40px 0 50px 0;
     height: 600px;
     object-fit: cover;
+  }
+  .section-wedo {
+    padding: 80px 50px 50px 50px;
   }
 
   .section-wedo__heading {
@@ -232,23 +252,26 @@ body {
   .icon-item__title {
     margin-bottom: 0;
   }
-  .trips-container {
+  .section-trips {
+    padding: 50px;
+  }
+  .section-trips-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    width: 100%;
   }
-  .trips-item {
+  .section-trips-image {
     flex: 0 0 calc(100% / 3 - 10px);
   }
-  .trips-item__img {
+  .section-trips-image__img {
     margin: 0;
     height: 250px;
     object-fit: cover;
   }
-  .trips-item__box {
+  .section-trips-image__box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,40 +279,44 @@ body {
     font-size: 60px;
     line-height: normal;
   }
-
-  .section-togo__container {
+  .section-togo {
+    padding: 80px 50px 70px 50px;
+  }
+  .section-togo-container {
     display: flex;
     gap: 50px;
   }
 
-  .section-togo__heading-item {
+  .section-togo-item {
     flex-basis: 40%;
   }
 
-  .section-togo__heading {
+  .section-togo-item__heading {
     line-height: normal;
   }
 
-  .section-togo__textarea {
+  .section-togo-text {
     flex-basis: 60%;
   }
 
   .button {
     padding: 10px 35px;
   }
-
-  .section-reviews__heading {
+  .section-reviews {
+    padding: 80px 50px;
+  }
+  .section-reviews-text__heading {
     font-size: 50px;
   }
 
-  .section-reviews__container-clients {
+  .section-reviews-clients {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     gap: 40px;
   }
 
-  .section-reviews__text {
+  .section-reviews-text {
     width: 480px;
     margin: 0 auto;
   }
@@ -299,7 +326,7 @@ body {
     flex-wrap: wrap;
   }
 
-  .section-gallery__item {
+  .section-gallery-image {
     flex: 0 0 calc(100% / 2);
   }
 }
@@ -308,13 +335,17 @@ body {
   .header-background__heading {
     position: static;
     margin: 0 auto;
-    padding-left: 660px;
-    padding-top: 360px;
-    font-size: 70px;
-    line-height: 4.5rem;
+    padding-left: 600px;
+    padding-top: 330px;
+    line-height: 5rem;
   }
 
-  .section-aboutus__text {
+  .centering {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  .section-aboutus-text {
     padding: 0 50px;
   }
 
@@ -323,12 +354,16 @@ body {
     max-height: 400px;
   }
 
+  .section-wedo {
+    padding: 50px;
+  }
+
   .icon-container {
     margin-top: 100px;
     margin-bottom: 50px;
   }
 
-  .section-reviews__container-clients {
+  .section-reviews-clients {
     gap: 100px;
   }
 }
