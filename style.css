@@ -25,7 +25,7 @@ body {
   margin: 0;
 }
 
-.header-background {
+.hero {
   position: relative;
   min-height: 600px;
   width: 100%;
@@ -41,7 +41,7 @@ body {
   background-color: var(--dark-brown);
 }
 
-.header-background__heading {
+.hero__heading {
   position: absolute;
   right: 25px;
   bottom: 25px;
@@ -55,15 +55,15 @@ body {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
-.section-aboutus {
+.aboutus {
   padding: 80px 25px;
 }
 
-.section-aboutus-text__heading {
+.aboutus-text__heading {
   font-size: 30px;
 }
 
-.section-aboutus-text__paragraph {
+.aboutus-text__paragraph {
   margin-bottom: 30px;
 }
 
@@ -73,17 +73,17 @@ body {
   border-radius: 5px;
 }
 
-.section-wedo-background {
+.wedo-background {
   background-color: var(--dark-brown);
   color: var(--grey);
   text-align: center;
 }
 
-.section-wedo {
+.wedo {
   padding: 80px 25px 50px 25px;
 }
 
-.section-wedo__heading {
+.wedo__heading {
   font-size: 30px;
   font-weight: 500;
 }
@@ -99,18 +99,18 @@ body {
   font-size: 25px;
 }
 
-.section-trips {
+.trips {
   padding: 50px 25px 50px 25px;
 }
 
-.section-trips-image__img {
+.trips-image__img {
   display: block;
   width: 100%;
   margin-top: 10px;
   border-radius: 5px;
 }
 
-.section-trips-image__box {
+.trips-image__box {
   padding: 25px;
   margin: 10px 0 0 0;
   width: 100%;
@@ -120,17 +120,17 @@ body {
   background-color: var(--grey);
 }
 
-.section-togo {
+.togo {
   padding: 80px 25px 70px 25px;
 }
 
-.section-togo-background {
+.togo-background {
   color: var(--grey);
   background-color: var(--light-brown);
   text-align: left;
 }
 
-.section-togo-item__heading {
+.togo-item__heading {
   margin: 0;
   font-size: 60px;
   line-height: normal;
@@ -158,19 +158,19 @@ body {
   background-color: var(--hover);
 }
 
-.section-reviews-background {
+.reviews-background {
   background-color: var(--grey);
 }
 
-.section-reviews {
+.reviews {
   padding: 80px 25px 50px 25px;
 }
 
-.section-reviews-container {
+.reviews-container {
   text-align: center;
 }
 
-.section-reviews-clients-item__img {
+.reviews-clients-item__img {
   width: 100%;
   width: 150px;
   height: 150px;
@@ -178,10 +178,12 @@ body {
   border-radius: 50%;
   margin-top: 40px;
 }
-.section-reviews-clients-item__name {
+
+.reviews-clients-item__name {
   font-weight: 400;
 }
-.section-gallery-image__img {
+
+.gallery-image__img {
   display: block;
   width: 100%;
 }
@@ -208,26 +210,27 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header-background__heading {
+  .hero__heading {
     right: 50px;
     font-size: 80px;
     line-height: 4.5rem;
   }
 
-  .section-aboutus {
+  .aboutus {
     padding: 80px 50px;
     display: flex;
   }
 
-  .section-aboutus-text {
+  .aboutus-text {
     flex: 0 0 50%;
     padding: 0 30px;
   }
 
-  .section-aboutus-text__heading {
+  .aboutus-text__heading {
     margin-top: 80px;
     font-size: 50px;
   }
+
   .aboutus-image {
     flex: 0 0 50%;
   }
@@ -237,25 +240,30 @@ body {
     height: 600px;
     object-fit: cover;
   }
-  .section-wedo {
+
+  .wedo {
     padding: 80px 50px 50px 50px;
   }
 
-  .section-wedo__heading {
+  .wedo__heading {
     margin-top: 60px;
     font-size: 45px;
   }
+
   .icon-container {
     display: flex;
     justify-content: space-around;
   }
+
   .icon-item__title {
     margin-bottom: 0;
   }
-  .section-trips {
+
+  .trips {
     padding: 50px;
   }
-  .section-trips-container {
+
+  .trips-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -263,15 +271,18 @@ body {
     align-items: center;
     width: 100%;
   }
-  .section-trips-image {
+
+  .trips-image {
     flex: 0 0 calc(100% / 3 - 10px);
   }
-  .section-trips-image__img {
+
+  .trips-image__img {
     margin: 0;
     height: 250px;
     object-fit: cover;
   }
-  .section-trips-image__box {
+
+  .trips-image__box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -279,60 +290,65 @@ body {
     font-size: 60px;
     line-height: normal;
   }
-  .section-togo {
+
+  .togo {
     padding: 80px 50px 70px 50px;
   }
-  .section-togo-container {
+
+  .togo-container {
     display: flex;
     gap: 50px;
   }
 
-  .section-togo-item {
+  .togo-item {
     flex-basis: 40%;
   }
 
-  .section-togo-item__heading {
+  .togo-item__heading {
     line-height: normal;
   }
 
-  .section-togo-text {
+  .togo-text {
     flex-basis: 60%;
   }
 
   .button {
     padding: 10px 35px;
   }
-  .section-reviews {
+
+  .reviews {
     padding: 80px 50px;
   }
-  .section-reviews-text__heading {
+
+  .reviews-text__heading {
     font-size: 50px;
   }
 
-  .section-reviews-clients {
+  .reviews-clients {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     gap: 40px;
   }
 
-  .section-reviews-text {
+  .reviews-text {
     width: 480px;
     margin: 0 auto;
   }
 
-  .section-gallery {
+  .gallery {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .section-gallery-image {
+  .gallery-image {
     flex: 0 0 calc(100% / 2);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .header-background__heading {
+  
+  .hero__heading {
     position: static;
     margin: 0 auto;
     padding-left: 600px;
@@ -345,7 +361,7 @@ body {
     max-width: 1100px;
   }
 
-  .section-aboutus-text {
+  .aboutus-text {
     padding: 0 50px;
   }
 
@@ -354,7 +370,7 @@ body {
     max-height: 400px;
   }
 
-  .section-wedo {
+  .wedo {
     padding: 50px;
   }
 
@@ -363,7 +379,7 @@ body {
     margin-bottom: 50px;
   }
 
-  .section-reviews-clients {
+  .reviews-clients {
     gap: 100px;
   }
 }
